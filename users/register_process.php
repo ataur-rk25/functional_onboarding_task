@@ -155,4 +155,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $mysqli->close();
 }
-?>

@@ -14,8 +14,7 @@ $create_table_query = "CREATE TABLE IF NOT EXISTS users (
 
 if ($mysqli->query($create_table_query) === false) {
     die("Error creating table: " . $mysqli->error);
-}
-else{
+} else {
     $username = 'admin';
     $name = 'Admin';
     $admin_password = password_hash('Admin123!', PASSWORD_DEFAULT);
@@ -23,7 +22,7 @@ else{
     $email = 'admin@email.com';
     $user_role = 'admin';
 
-    $stmt = $mysqli->prepare("SELECT id FROM users WHERE username = ? OR email = ?"  );
+    $stmt = $mysqli->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
     $stmt->bind_param("ss", $username, $email);
     $stmt->execute();
     $stmt->bind_result($user_id);
@@ -32,16 +31,14 @@ else{
 
     if ($user_id) {
         //do nothing
-    }
-    else{
+    } else {
         $stmt = $mysqli->prepare("INSERT INTO users (username, password, name, phone, email, user_role) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $username, $admin_password, $name, $phone, $email, $user_role);
         $stmt->execute();
         $stmt->close();
     }
- 
+
     $_SESSION['setup_completed'] = true;
     header("Location: login.php");
     exit();
 }
-?>

@@ -25,7 +25,7 @@ h2{
     font-size: 40px;
 }
 h3{
-    font-size: 32ßpx;
+    font-size: 32px;
 }
 a{
     text-decoration: none;
@@ -189,6 +189,9 @@ input[type="file"] {
     top: 45%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+.input_error{
+    border-color: red!important;
 }
 .error_message{
     color:red;
