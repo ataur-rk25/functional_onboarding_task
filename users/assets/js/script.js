@@ -261,7 +261,7 @@ function clearOtherErrors(currentInput) {
   var els = document.querySelectorAll(
     "input[type=text], input[type=email], input[type=password]"
   );
-  for (let j = 0; j < els.length; j++) {
+  for (var j = 0; j < els.length; j++) {
     if (els[j].id !== currentInput.id) {
       var otherErrorId = els[j].id + "_error";
       var otherErrorElement = document.getElementById(otherErrorId);
@@ -322,7 +322,7 @@ function validateForm() {
   }
 
   var errorMessages = document.querySelectorAll(".error_message");
-  for (let i = 0; i < errorMessages.length; i++) {
+  for (var i = 0; i < errorMessages.length; i++) {
     errorMessages[i].innerText = "";
   }
   return true;
@@ -404,7 +404,7 @@ function validateFormEdit() {
   }
 
   var errorMessages = document.querySelectorAll(".error_message");
-  for (let i = 0; i < errorMessages.length; i++) {
+  for (var i = 0; i < errorMessages.length; i++) {
     errorMessages[i].innerText = "";
   }
   return true;
