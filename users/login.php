@@ -27,7 +27,7 @@ include('header.php');
                 unset($_SESSION['error_message']); // Clear the error message after displaying
             }
             ?>
-            <form id="login_form" action="login_process.php" method="post" onsubmit="return validateLoginForm();">
+            <form id="login_form" action="login_process.php" method="post" onsubmit="return validateLoginForm(event)">
                 <div class="form-group-row">
                     <div class="form-group">
                         <div class="username_email_wrapper">

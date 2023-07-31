@@ -86,7 +86,7 @@ if (!isset($_SESSION["user_id"])) {
         unset($_SESSION['error_message']);
       }
       ?>
-      <form id="edit_user_form" action="edit_process.php" method="post" style="display:none" onsubmit=" return validateFormEdit();" enctype="multipart/form-data">
+      <form id="edit_user_form" action="edit_process.php" method="post" style="display:none" onsubmit=" return validateFormEdit()" enctype="multipart/form-data">
         <small>Note: Username cannot be changed</small>
         <div class="form-group-row d-flex">
           <div class="form-group flex-50">

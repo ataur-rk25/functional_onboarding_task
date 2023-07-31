@@ -26,7 +26,7 @@ include('header.php');
                     unset($_SESSION['error_message']); // Clear the error message after displaying
                 }
             ?>
-                <form action="register_process.php" method="post" id="register_form" onsubmit="return validateForm();" enctype="multipart/form-data">
+                <form action="register_process.php" method="post" id="register_form" onsubmit="return validateForm()" enctype="multipart/form-data">
                     <div class="form-group-row d-flex">
                         <div class="form-group flex-50">
                             <input class="form_input" type="text" name="username" id="username" placeholder="Username*">

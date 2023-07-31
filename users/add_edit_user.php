@@ -71,9 +71,9 @@ if (!isset($_SESSION["user_id"])) {
                         <div class="form-group-row d-flex">
                             <div class="form-group flex-50">
                                 <input class="form_input" type="text" name="username" id="username" placeholder="Username*" value="<?php if (!empty($userdetails['username'])) : echo $userdetails['username'];
-                                                                                                                                    endif; ?>" required <?php if ($action == "edit") {
-                                                                                                                                                            echo 'disabled';
-                                                                                                                                                        } ?>>
+                                                                                                                                    endif; ?>" <?php if ($action == "edit") {
+                                                                                                                                                    echo 'disabled';
+                                                                                                                                                } ?>>
 
                                 <p class="error_message" id="username_error" style="color: red;"></p>
                             </div>
@@ -112,7 +112,7 @@ if (!isset($_SESSION["user_id"])) {
                             </div>
                             <div class="form-group flex-50">
                                 <input class="form_input" type="text" name="confirm_password" id="confirm_password" <?php if ($action == "add") {
-                                                                                                                        echo 'placeholder="Confirm password*" required';
+                                                                                                                        echo 'placeholder="Confirm password*"';
                                                                                                                     } ?> <?php if ($action == "edit") {
                                                                                                                                 echo 'placeholder="******"';
                                                                                                                             } ?>>
