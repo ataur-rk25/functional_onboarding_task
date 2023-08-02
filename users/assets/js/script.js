@@ -140,9 +140,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (window.location.pathname === "/users/user_list.php") {
+  /*if (window.location.pathname === "/users/user_list.php") {
     loadUserTable();
-  }
+  }*/
 });
 
 function validateUserName(username) {

@@ -34,8 +34,15 @@ if (!isset($_SESSION["user_id"])) {
             </div>
         </div>
 
-<?php
+        <?php
         include('footer.php');
+        ?>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                loadUserTable();
+            });
+        </script>
+<?php
     } else {
         header("Location: user_profile.php");
         exit();
